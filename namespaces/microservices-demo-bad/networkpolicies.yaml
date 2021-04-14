@@ -4,7 +4,9 @@ metadata:
   name: default-deny-all
   namespace: microservices-demo-bad
 spec:
-  podSelector: {}
+  podSelector:
+    matchLabels:
+      app: frontend
   ingress:
   - ports:
     - protocol: TCP
